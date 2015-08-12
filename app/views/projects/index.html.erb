@@ -17,7 +17,6 @@
   <tbody>
     <% @projects.each do |project| %>
       <tr>
-        <% unless false || nil %>
         <td><%= project.title %></td>
         <td><%= project.description %></td>
         <td><%= project.date %></td>
@@ -30,7 +29,7 @@
         <td><%= project.url4 %></td>
         <td><%= project.kitchen %></td>
         <td><%= project.bath %></td>
-        <td><%= "A/C #{project.air_conditioning unless project.air_conditioning == false} --" %></td>
+        <td><%= unless project.air_conditioning == false%></td>
         <td><%= project.roof %></td>
         <td><%= project.exterior_general %></td>
         <td><%= project.paint %></td>
