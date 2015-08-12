@@ -1,0 +1,81 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Projects</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Date</th>
+      <th>Main pic</th>
+
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projects.each do |project| %>
+      <tr>
+        <% unless false || nil %>
+        <td><%= project.title %></td>
+        <td><%= project.description %></td>
+        <td><%= project.date %></td>
+        <td><%= project.location_city %></td>
+        <td><%= project.budget %></td>
+        <td><%= project.ends %></td>
+        <td><%= image_tag project.url1 %></td>
+        <td><%= project.url2 %></td>
+        <td><%= project.url3 %></td>
+        <td><%= project.url4 %></td>
+        <td><%= project.kitchen %></td>
+        <td><%= project.bath %></td>
+        <td><%= "A/C #{project.air_conditioning unless project.air_conditioning == false} --" %></td>
+        <td><%= project.roof %></td>
+        <td><%= project.exterior_general %></td>
+        <td><%= project.paint %></td>
+        <td><%= project.floor %></td>
+        <td><%= project.pool %></td>
+        <td><%= project.drive_way %></td>
+        <td><%= project.landscaping %></td>
+        <td><%= project.fence %></td>
+        <td><%= project.windows %></td>
+        <td><%= project.electrical %></td>
+        <td><%= project.plumbing %></td>
+        <td><%= project.handy_man %></td>
+        <td><%= project.sqft %></td>
+        <td><%= project.number_of_cabinets %></td>
+        <td><%= project.countertop_style %></td>
+        <td><%= project.counter_top_length %></td>
+        <td><%= project.number_of_outlets %></td>
+        <td><%= project.light_fixture_type %></td>
+        <td><%= project.floor_sqft %></td>
+        <td><%= project.floor_type %></td>
+        <td><%= project.vanity_width %></td>
+        <td><%= project.tub_length %></td>
+        <td><%= project.shower_sqft %></td>
+        <td><%= project.mirror %></td>
+        <td><%= project.bath_fan %></td>
+        <td><%= project.ac_type %></td>
+        <td><%= project.home_sqft %></td>
+        <td><%= project.ac_size %></td>
+        <td><%= project.duct_work %></td>
+        <td><%= project.more_detail %></td>
+        <td><%= project.floor_demo %></td>
+        <td><%= project.length %></td>
+        <td><%= project.width %></td>
+        <td><%= project.fence_material %></td>
+        <td><%= project.window_type %></td>
+        <td><%= project.quantity %></td>
+<% end %>
+        <td><%= link_to 'Show', project %></td>
+        <td><%= link_to 'Edit', edit_project_path(project) %></td>
+        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Project', new_project_path %>
