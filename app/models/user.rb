@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   has_many :projects
   has_many :bids
   has_many :reviews, through: :projects
-  
+  has_one :profile
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 end

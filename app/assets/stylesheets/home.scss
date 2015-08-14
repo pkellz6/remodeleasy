@@ -1,3 +1,25 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.signupmaster {
+    margin-top: -2em;
+    font-size: 16px;
+    width: 240px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 8px;
+    background: #1EACC7;
+    font-color: white;
+    opacity: 1;
+}
+
+.loginmaster {
+  font-size: 16px;
+  width: 240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 8px;
+  background: black;
+  font-color: white;
+  opacity: .6;
+}
