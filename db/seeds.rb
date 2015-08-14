@@ -6,6 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create(email: 'ravi.bakhai@gmail.com', password: 'poop')
-Project.create(title: 'bathroom', description: 'remodel bathroom')
-Bid.create(bid: '100')
+User.create(id: 1, email: 'ravi.bakhai@gmail.com', password: 'wyncode1')
+Project.create(user_id: 1, title: 'bathroom', description: 'remodel bathroom')
+Bid.create(user_id: 1, project_id: 1, bid: '100')
