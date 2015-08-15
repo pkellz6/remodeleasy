@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150814145343) do
+ActiveRecord::Schema.define(version: 20150814234029) do
 
   create_table "bids", force: :cascade do |t|
     t.integer  "bid"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20150814145343) do
     t.text     "bio"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean  "deactivate"
   end
 
   add_index "profiles", ["user_id"], name: "index_profiles_on_user_id"

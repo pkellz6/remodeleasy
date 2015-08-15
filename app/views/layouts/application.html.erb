@@ -23,9 +23,12 @@
    <li><%= link_to 'Bids', bids_path %></li>
    <li><%= link_to 'Profile', profiles_path %></li>
    <li class='last'><%= link_to 'About', about_index_path %></li>
+  <li> <% if user_signed_in? %>
+   <strong class="login"> <%= current_user.try(:email)%></strong>
+   <% end %>
+</li>
 </ul>
 </div>
-
 
 
 </head>
