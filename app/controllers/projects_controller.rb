@@ -13,6 +13,7 @@ class ProjectsController < ApplicationController
   def show
     @bids = Bid.all
     @users = User.all
+    @bid = Bid.new
   end
 
   # GET /projects/new

@@ -295,15 +295,20 @@
   <%= @project.handy_man %>
   <% end %>
 </p>
+<br>
+<br>
+  <h3>Current Bids</h3>
+<% @project.bids.each do |bid| %> <p>
+$<%= bid.bid %>
+<br>
+Added on: <%= bid.created_at %>
+</p>
+<% end %>
+<br>
+<br>
+<h3>Bid on this Project</h3>
+<%= render 'bids/form' %>
 
-<h2>Current Bids</h2>
-<% @bids.each do |bid| %>
-<% if @project.id == bid.project_id %>
-  <%= bid.bid  %><span> By User </span><%=link_to bid.user_id, profile_path%><br>
-  <% end %>
-  <% end %>
-  <br>
-  <br>
-
+<br>
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
